@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { Configuration, OpenAIApi } from "openai";
+// import { Configuration, OpenAIApi } from "openai";
 
-const configuration = new Configuration({
-    organization: "org-bSwgydMjCHkxTHXKbKBgbWqX",
-    apiKey: "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",
-});
-const openai = new OpenAIApi(configuration);
-const response = await openai.listEngines();
+// // const configuration = new Configuration({
+// //     organization: "org-bSwgydMjCHkxTHXKbKBgbWqX",
+// //     apiKey: "{API-KEY}",
+// // });
+// // const openai = new OpenAIApi(configuration);
+// // const response = await openai.listEngines();
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

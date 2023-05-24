@@ -1,30 +1,27 @@
 import React, { useEffect } from 'react';
 
-// Rest of your code using the chrome object
-
-
 function FormAutoFiller() {
   useEffect(() => {
-    // Function to fill the form fields with the provided data
-    function fillForm(formData) {
+    // Function to fill the form fields with valid information
+    function fillForm() {
       const formFields = {
-        name: formData.name,
-        email: formData.email,
-        age: formData.age,
-        phoneNumber: formData.phoneNumber
+        name: 'John Doe',
+        email: 'johndoe@example.com',
+        age: '25',
+        phoneNumber: '1234567890'
       };
 
-      // Loop through the form fields and fill them with the corresponding data
+      // Loop through the form fields and fill them with valid information
       Object.keys(formFields).forEach((fieldName) => {
-        const fieldElement = document.querySelector(`.${fieldName}`);
+        const fieldElement = document.querySelector(`input[name="${fieldName}"]`);
         if (fieldElement) {
           fieldElement.value = formFields[fieldName];
         }
       });
     }
 
-    // Listen for messages from the background script
-    
+    // Call the fillForm function when the component mounts
+    fillForm();
   }, []);
 
   return (
